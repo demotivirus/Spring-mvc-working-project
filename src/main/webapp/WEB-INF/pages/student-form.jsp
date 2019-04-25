@@ -2,9 +2,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Student registration form</title>
 </head>
 <body>
+    <%--@elvariable id="student" type=""--%>
     <form:form action="processForm" modelAttribute="student">First name<form:input path="firstName"/>
 
             <br><br>
@@ -37,6 +38,13 @@
                 <form:options items="${favoriteLanguageProperties}"/>
             </form:select>
             <br><br>
+
+            Operating systems:
+            Linux <form:checkbox path="operatingSystem" value="Linux"/>
+            Mac <form:checkbox path="operatingSystem" value="Mac"/>
+            Windows <form:checkbox path="operatingSystem" value="Windows"/>
+            <br><br>
+
             <input type="submit" value="Submit"/>
     </form:form>
 </body>
