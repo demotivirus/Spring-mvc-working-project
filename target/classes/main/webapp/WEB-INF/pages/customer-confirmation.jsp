@@ -11,6 +11,5 @@
     <br><br>
     Postal code: ${customer.postalCode}
     <br><br>
-    <img src="/resources/images/java.jpg" alt="Java"/>
 </body>
 </html>
