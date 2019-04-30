@@ -6,12 +6,13 @@ public class Customer {
     private String firstName;
 
     @NotNull
-    @Size(min=3, message = "Is a required field")
+    @Size(min=3, message = "is a required field")
     private String lastName;
 
+    @NotNull(message = "is required")
     @Min(value = 0, message = "must be greater then or equal to zero")
     @Max(value = 10, message = "must be less then or equal to 10")
-    private int freePasses;
+    private Integer freePasses;
 
     @Pattern(regexp="^[a-zA-z0-9]{5}", message = "only 5 digits")
     private String postalCode;
@@ -32,11 +33,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public int getFreePasses() {
+    public Integer getFreePasses() {
         return freePasses;
     }
 
-    public void setFreePasses(int freePasses) {
+    public void setFreePasses(Integer freePasses) {
         this.freePasses = freePasses;
     }
 
